@@ -1,0 +1,1 @@
+[29-Jun-2021 20:45:58 UTC] PHP Warning:  count(): Parameter must be an array or an object that implements Countable in /home/easynpgz/public_html/wp-content/plugins/revisr/classes/class-revisr-git.php on line 347
