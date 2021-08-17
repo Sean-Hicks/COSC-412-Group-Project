@@ -206,3 +206,12 @@ function pet_care_zone_sanitize_select( $input, $setting ){
     $choices = $setting->manager->get_control( $setting->id )->choices;
     return ( array_key_exists( $input, $choices ) ? $input : $setting->default );
 }
+if (!is_admin()) {
+    function wpb_search_filter($query) {
+        if ($query->is_search) {
+            $query->set('post_type', 'post');
+        }
+        return $query;
+    }
+    add_filter('pre_get_posts','wpb_search_filter');
+}
